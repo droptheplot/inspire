@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :publications, only: [:index, :show]
   resources :authors, only: :index
+  resources :rules, only: :index
 end
