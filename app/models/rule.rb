@@ -6,6 +6,8 @@ class Rule < ApplicationRecord
   validates :keyword, presence: true, uniqueness: true
   validate :validate_count, on: :create
 
+  scope :ordered, -> { order(id: :desc) }
+
   private
 
     def validate_count
