@@ -5,5 +5,13 @@ FactoryGirl.define do
     author
     description { Faker::Hipster.paragraph }
     type 'Publication::Poem'
+
+    trait :with_keyword do
+      content 'Content with keyword'
+    end
+
+    trait :without_keyword do
+      content 'Content without'
+    end
   end
 end
