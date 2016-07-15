@@ -1,7 +1,7 @@
 require 'faker'
 
-def create_publication(type = :publication_poem)
-  publication = FactoryGirl.create(type)
+def create_publication(type = :poem)
+  publication = FactoryGirl.create(:publication, type)
 
   3.times do
     CreateTagService.new(publication, Faker::Hacker.noun).()
@@ -9,6 +9,6 @@ def create_publication(type = :publication_poem)
 end
 
 5.times do
-  create_publication(:publication_poem)
-  create_publication(:publication_short_story)
+  create_publication(:poem)
+  create_publication(:short_story)
 end
