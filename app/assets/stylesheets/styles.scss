@@ -1,3 +1,7 @@
 $font-size-root: 13px !default;
 
 @import 'bootstrap';
+
+.form-control {
+  -webkit-appearance: none;
+}
