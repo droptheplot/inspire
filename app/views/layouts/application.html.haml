@@ -6,6 +6,8 @@
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
   %body
+    %nav.navbar.navbar-full.navbar-dark.bg-primary.p-y-1
+      .container
+        = link_to 'Poems & Short Stories', root_path, class: 'navbar-brand'
     .container.p-y-3
       = yield
-
