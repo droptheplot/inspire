@@ -8,8 +8,8 @@ class CreateTagService
 
   def call
     ActiveRecord::Base.transaction do
-      tag = Tag.where(name: @name).first_or_create!
-      tagging = Tagging.create!(taggable: @taggable, tag: tag)
+      tag = Tag.where(name: @name).first_or_create
+      Tagging.where(taggable: @taggable, tag: tag).first_or_create
     end
   end
 end
