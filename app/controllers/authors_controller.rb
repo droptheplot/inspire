@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
   def index
-    @authors = Author.all
+    @authors = Author.includes(:tags).all
   end
 end
