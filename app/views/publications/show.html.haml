@@ -3,7 +3,7 @@
 .m-b-1
   = @publication.content
 .m-b-1
-  = render 'tags', publication: @publication
+  = render 'shared/tags', obj: @publication
 .m-b-1
   = render "publications/type/#{@publication.type.demodulize.underscore}",
            publication: @publication
