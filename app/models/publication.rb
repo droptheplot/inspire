@@ -3,6 +3,8 @@ class Publication < ApplicationRecord
 
   validates :title, presence: true
 
+  after_commit :apply_rules, on: :create
+
   def tags
     Tag.includes(:taggings)
        .where(
@@ -12,4 +14,10 @@ class Publication < ApplicationRecord
          }
        )
   end
+
+  private
+
+    def apply_rules
+      ApplyRulesJob.perform_now(id)
+    end
 end
