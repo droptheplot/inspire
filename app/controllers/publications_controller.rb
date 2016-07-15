@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   def index
-    @publications = Publication.includes(:tags).all
+    @publications = Publication.includes(:tags).order(id: :desc).all
   end
 
   def show
