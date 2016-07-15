@@ -1,5 +1,5 @@
 describe CreateTagService do
-  let(:poem) { FactoryGirl.create(:publication_poem) }
+  let(:poem) { FactoryGirl.create(:publication, :poem) }
 
   describe '#call' do
     context 'for new tag' do

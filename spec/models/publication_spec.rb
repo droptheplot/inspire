@@ -1,5 +1,5 @@
 describe Publication, type: :model do
-  let(:poem) { FactoryGirl.create(:publication_poem) }
+  let(:poem) { FactoryGirl.create(:publication, :poem) }
 
   describe '#tags' do
     before do

@@ -7,7 +7,7 @@ describe ApplyRulesJob, type: :job do
 
     context 'with keyword' do
       let(:poem) do
-        FactoryGirl.build(:publication_poem, :with_keyword)
+        FactoryGirl.build(:publication, :poem, :with_keyword)
       end
 
       it 'creates tag for publication' do
@@ -17,7 +17,7 @@ describe ApplyRulesJob, type: :job do
 
     context 'without keyword' do
       let(:poem) do
-        FactoryGirl.build(:publication_poem, :without_keyword)
+        FactoryGirl.build(:publication, :poem, :without_keyword)
       end
 
       it 'do nothing' do

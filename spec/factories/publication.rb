@@ -1,10 +1,17 @@
 FactoryGirl.define do
-  factory :publication_poem, class: Publication::Poem do
+  factory :publication, class: Publication do
     title { Faker::Hipster.sentence }
     content { Faker::Hipster.paragraph }
     author
     description { Faker::Hipster.paragraph }
-    type 'Publication::Poem'
+
+    trait :poem do
+      type 'Publication::Poem'
+    end
+
+    trait :short_story do
+      type 'Publication::ShortStory'
+    end
 
     trait :with_keyword do
       content 'Content with keyword'
