@@ -1,3 +1,2 @@
 - obj.tags.each do |tag|
-  %span.label.label-default
-    = tag.name
+  = render 'shared/tag', tag: tag
