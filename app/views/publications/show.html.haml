@@ -2,4 +2,8 @@
   = @publication.title
 .m-b-1
   = @publication.content
-= render 'tags', publication: @publication
+.m-b-1
+  = render 'tags', publication: @publication
+.m-b-1
+  = render "publications/type/#{@publication.type.demodulize.underscore}",
+           publication: @publication
