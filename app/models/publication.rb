@@ -6,5 +6,5 @@ class Publication < ApplicationRecord
 
   belongs_to :author
 
-  validates :title, presence: true
+  validates :title, :type, presence: true
 end
