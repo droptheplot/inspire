@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :tag do
-    name { Faker::Hacker.noun }
+    sequence :name do |n|
+      "#{Faker::Hacker.noun}-#{n}"
+    end
   end
 end
