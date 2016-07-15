@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   before_action :set_type, only: [:new, :create]
+  before_action :set_rules, only: [:new, :create]
 
   def index
     @publications = Publication.includes(:tags).order(id: :desc).all
@@ -32,6 +33,10 @@ class PublicationsController < ApplicationController
 
     def set_type
       @type = params.dig(:publication, :type) || params.dig(:type)
+    end
+
+    def set_rules
+      @rules = Rule.includes(:tag).ordered.all
     end
 
     def publication_klass
