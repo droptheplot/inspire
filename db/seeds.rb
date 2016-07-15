@@ -12,3 +12,7 @@ end
   create_publication(:poem)
   create_publication(:short_story)
 end
+
+10.times do
+  FactoryGirl.create(:rule)
+end
