@@ -1,0 +1,12 @@
+- @publications.each_slice(3) do |publications_group|
+  .row.m-b-1
+    - publications_group.each do |publication|
+      .col-md-4
+        .card
+          .card-block
+            %h4.card-title
+              = link_to publication.title, publication_path(publication)
+            .card-text
+              = publication.content
+          .card-footer
+            = render 'tags', publication: publication
