@@ -16,5 +16,9 @@
             = link_to 'Authors', authors_path, class: 'nav-link'
           %li.nav-item
             = link_to 'Rules', rules_path, class: 'nav-link'
+          %li.nav-item
+            .btn-group
+              = link_to 'New Poem', new_publication_path(:poem), class: 'btn btn-success'
+              = link_to 'New Story', new_publication_path(:short_story), class: 'btn btn-danger'
     .container.p-y-3
       = yield

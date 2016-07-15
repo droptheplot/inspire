@@ -1,0 +1,16 @@
+= form_for @publication, url: publications_path, as: :publication do |f|
+  = f.hidden_field :type, value: @type
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :content
+    = f.text_area :content, class: 'form-control'
+  .form-group
+    = f.label :author
+    = f.select :author_id, Author.all.collect { |a| [a.name, a.id] }, {},
+      class: 'form-control'
+  .form-group
+    = render "publications/#{@type}/form", f: f
+  .form-group
+    = f.submit 'Submit', class: 'btn btn-primary'
