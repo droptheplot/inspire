@@ -11,7 +11,7 @@ class ApplyRulesJob < ApplicationJob
     rules = Rule.all
 
     rules.each do |rule|
-      return unless obj.public_send(klass::APPLY_RULES_COLUMN_NAME)
+      next unless obj.public_send(klass::APPLY_RULES_COLUMN_NAME)
                        .include?(rule.keyword)
 
       CreateTagService.new(obj, rule.tag.name).()
