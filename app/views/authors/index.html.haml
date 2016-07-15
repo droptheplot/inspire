@@ -1,0 +1,8 @@
+- @authors.each do |author|
+  .m-b-3
+    %h4.m-b-1
+      = author.name
+    .m-b-1
+      = author.biography
+    .m-b-1
+      = render 'shared/tags', obj: author

@@ -9,5 +9,10 @@
     %nav.navbar.navbar-full.navbar-dark.bg-primary.p-y-1
       .container
         = link_to 'Poems & Short Stories', root_path, class: 'navbar-brand'
+        %ul.nav.navbar-nav.pull-xs-right
+          %li.nav-item
+            = link_to 'Publications', root_path, class: 'nav-link'
+          %li.nav-item
+            = link_to 'Authors', authors_path, class: 'nav-link'
     .container.p-y-3
       = yield
