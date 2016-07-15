@@ -1,8 +1,9 @@
 FactoryGirl.define do
-  factory :publication do
+  factory :publication_poem, class: Publication::Poem do
     title { Faker::Hipster.sentence }
     content { Faker::Hipster.paragraph }
-    author nil
+    author
     description { Faker::Hipster.paragraph }
+    type 'Publication::Poem'
   end
 end
