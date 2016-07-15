@@ -1,24 +1,11 @@
-# README
+# Inspire
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+* `git clone git@github.com:droptheplot/inspire.git`
+* `cd inspire`
+* `./bin/setup`
 
-* Ruby version
+## License
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
