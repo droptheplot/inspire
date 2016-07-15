@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/schema.rb'
+Documentation:
+  Enabled: false
+Style/IndentationConsistency:
+  Enabled: false
+Style/PredicateName:
+  Enabled: false
