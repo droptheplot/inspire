@@ -1,0 +1,13 @@
+%table.table
+  %thead
+    %tr
+      %th
+        Keyword
+      %th
+        Tag
+  - rules.each do |rule|
+    %tr
+      %td
+        = rule.keyword
+      %td
+        = render 'shared/tag', tag: rule.tag
