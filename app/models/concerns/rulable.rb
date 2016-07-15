@@ -8,6 +8,6 @@ module Rulable
   private
 
     def apply_rules
-      ApplyRulesJob.perform_now(id)
+      ApplyRulesJob.perform_now(self.class, id)
     end
 end
