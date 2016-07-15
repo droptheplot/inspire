@@ -8,5 +8,6 @@
               = link_to publication.title, publication_path(publication)
             .card-text
               = publication.content
-          .card-footer
-            = render 'shared/tags', obj: publication
+          - if publication.tags.any?
+            .card-footer
+              = render 'shared/tags', obj: publication
