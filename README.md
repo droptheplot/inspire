@@ -1,5 +1,9 @@
 # Inspire
 
+## Requirements
+
+* Ruby 2.3.1+
+
 ## Getting Started
 
 * `git clone git@github.com:droptheplot/inspire.git`
