@@ -10,9 +10,11 @@ describe PublicationDecorator do
     @decorated_poem = PublicationDecorator.new(@poem)
   end
 
-  describe '#by_author' do
+  describe '#signature' do
     it 'returns type and author name' do
-      expect(@decorated_poem.by_author).to eq("Poem by #{@poem.author.name}")
+      expect(@decorated_poem.signature).to eq(
+        "Poem published by #{@poem.author.name}, less than a minute ago."
+      )
     end
   end
 end
