@@ -8,6 +8,7 @@ class Publication < ApplicationRecord
 
   validates :title, :type, presence: true
 
+  # @param value [String] `Publication::Poem` or `poem`
   def type=(value)
     klass = begin
               value.constantize
