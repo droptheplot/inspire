@@ -21,4 +21,10 @@
               = link_to 'New Poem', new_publication_path(:poem), class: 'btn btn-success'
               = link_to 'New Story', new_publication_path(:short_story), class: 'btn btn-danger'
     .container.p-y-3
+      - if flash[:alert] || notice.present?
+        .p-b-2
+          - if flash[:alert]
+            = render 'shared/notification', message: alert, type: 'danger'
+          - if notice.present?
+            = render 'shared/notification', message: notice, type: 'success'
       = yield
