@@ -18,8 +18,9 @@ class PublicationsController < ApplicationController
     @publication = publication_klass.new(publication_params)
 
     if @publication.save
-      redirect_to root_path
+      redirect_to root_path, notice: 'Publication has been successfully created.'
     else
+      flash.now[:alert] = @publication.errors.full_messages.first
       render :new
     end
   end
