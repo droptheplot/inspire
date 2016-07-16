@@ -3,8 +3,7 @@
 .m-b-1
   = @publication.content
 .m-b-1
-  By
-  = @publication.author.name
+  = @publication.by_author
 .m-b-1
   = render 'shared/tags', obj: @publication
 .m-b-1
