@@ -12,7 +12,7 @@ class ApplyRulesJob < ApplicationJob
 
     rules.each do |rule|
       next unless obj.public_send(klass::APPLY_RULES_COLUMN_NAME)
-                       .include?(rule.keyword)
+                     .include?(rule.keyword)
 
       CreateTagService.new(obj, rule.tag.name).()
     end
