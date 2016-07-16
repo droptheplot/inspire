@@ -22,7 +22,6 @@ feature 'Create publication' do
         expect(page.current_path).to eq(root_path)
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Poem title')
-        expect(page).to have_content(@author.name)
 
         expect(page).to have_content(@rule.keyword)
         expect(page).to have_content(@rule.tag.name)
@@ -40,7 +39,6 @@ feature 'Create publication' do
         expect(page.current_path).to eq(root_path)
         expect(page.status_code).to eq(200)
         expect(page).to have_content('Poem title')
-        expect(page).to have_content(@author.name)
 
         expect(page).not_to have_content(@rule.keyword)
         expect(page).not_to have_content(@rule.tag.name)
